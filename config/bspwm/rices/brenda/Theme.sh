@@ -29,21 +29,14 @@ blackb="#475258"  redb="#e67e80"  greenb="#a7c080"  yellowb="#dbbc7f"
 blue="#7fbbb3"   magenta="#d699b6"   cyan="#83c092"   white="#d3c6aa"
 blueb="#7fbbb3"  magentab="#d699b6"  cyanb="#83c092"  whiteb="#d3c6aa"
 
-# Gtk theme vars
-gtk_theme="Everforest-zk"	gtk_icons="Gruvbox-Plus-Dark"	gtk_cursor="Qogirr-Dark"	geany_theme="z0mbi3-EverForest"
-
-
 # Set bspwm configuration
 set_bspwm_config() {
-	bspc config border_width ${BORDER_WIDTH}
-	bspc config top_padding 48
-	bspc config bottom_padding 1
-	bspc config left_padding 1
-	bspc config right_padding 1
-	bspc config normal_border_color "${white}"
-	bspc config active_border_color "${white}"
-	bspc config focused_border_color "${green}"
-	bspc config presel_feedback_color "${yellow}"
+	bspc config focused_border_color "#7899FA"
+	bspc config normal_border_color "#1f222b"
+	bspc config border_width 5
+	bspc config borderless_monocle true
+	bspc config active_border_color "#bd93f9"
+	bspc config presel_feedback_color "#6272a4"
 }
 
 # Terminal colors
@@ -144,7 +137,7 @@ color7  ${white}
 color15 ${whiteb}
 EOF
 
-pidof -q kitty && killall -USR1 kitty
+pidof -x kitty && killall -USR1 kitty
 }
 
 # Set compositor configuration
@@ -163,7 +156,6 @@ set_picom_config() {
 set_dunst_config() {
 	sed -i "$HOME"/.config/bspwm/dunstrc \
 		-e "s/transparency = .*/transparency = 0/g" \
-		-e "s/icon_theme = .*/icon_theme = \"${gtk_icons}, Adwaita\"/g" \
 		-e "s/frame_color = .*/frame_color = \"${bg}\"/g" \
 		-e "s/separator_color = .*/separator_color = \"${fg}\"/g" \
 		-e "s/font = .*/font = JetBrainsMono NF Medium 9/g" \
@@ -233,38 +225,6 @@ set_launchers() {
 EOF
 }
 
-set_appearance() {
-	# Set the gtk theme corresponding to rice
-	if pidof -q xsettingsd; then
-		sed -i "$HOME"/.config/bspwm/xsettingsd \
-			-e "s|Net/ThemeName .*|Net/ThemeName \"$gtk_theme\"|" \
-			-e "s|Net/IconThemeName .*|Net/IconThemeName \"$gtk_icons\"|" \
-			-e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$gtk_cursor\"|"
-	else
-		sed -i "$HOME"/.config/gtk-3.0/settings.ini \
-			-e "s/gtk-theme-name=.*/gtk-theme-name=$gtk_theme/" \
-			-e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$gtk_icons/" \
-			-e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$gtk_cursor/"
-
-		sed -i "$HOME"/.gtkrc-2.0 \
-			-e "s/gtk-theme-name=.*/gtk-theme-name=\"$gtk_theme\"/" \
-			-e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$gtk_icons\"/" \
-			-e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$gtk_cursor\"/"
-	fi
-
-	sed -i -e "s/Inherits=.*/Inherits=$gtk_cursor/" "$HOME"/.icons/default/index.theme
-
-	# Reload daemon and apply gtk theme
-	pidof -q xsettingsd && killall -HUP xsettingsd
-	xsetroot -cursor_name left_ptr
-}
-
-# Apply Geany Theme
-set_geany(){
-	sed -i ${HOME}/.config/geany/geany.conf \
-	-e "s/color_scheme=.*/color_scheme=$geany_theme.conf/g"
-}
-
 # Launch theme
 launch_theme() {
 
@@ -289,6 +249,4 @@ set_picom_config
 set_dunst_config
 set_eww_colors
 set_launchers
-set_appearance
-set_geany
 launch_theme

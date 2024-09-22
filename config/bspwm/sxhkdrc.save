@@ -31,32 +31,13 @@ super + @space
 shift + alt + {b,t,n,v}
 	OpenApps {--browser,--telegram,--filemanager, --code}
 
-#Emoji-picker
-shift + alt + e
-	OpenApps --emoji
+# Terminal apps (ranger, cava, ncmpcpp)
+shift + alt + {r,c,k}
+	OpenApps {--ranger,--cava,--music}
 
-# Open ranger
-shift + alt + r
-	OpenApps --ranger
-
-#Текстовий редактор
-shift + alt + g
-	gnome-text-editor 
-
-#discond
-shift + alt + d 
-	discord
-
-#music
-shift + alt + k
-	OpenApps --player
-
-#pavuconrol
+# Pavucontrol
 shift + alt + p
-        OpenApps --soundcontrol
-#Spotify
-shift + alt + s
-	spotify
+	OpenApps --soundcontrol
 
 
 #|||----- System Keybindings -----|||#

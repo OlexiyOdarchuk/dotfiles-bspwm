@@ -1,13 +1,14 @@
-// Rofi colors for Emilia
+// Rofi colors for Karla
 
 * {
     font: "JetBrainsMono NF Bold 9";
-    background: #1A1B26;
-    background-alt: #1A1B26E0;
-    foreground: #c0caf5;
-    selected: #7aa2f7;
-    active: #9ece6a;
-    urgent: #f7768e;
-    
-    img-background: url("~/.config/bspwm/rices/emilia/rofi.webp", width);
+    background: #0E1113F7;
+    bg-alt: #111517;
+    background-alt: #0E1113F5;
+    foreground: #afb1db;
+    selected: #5884d4;
+    active: #61b33e;
+    urgent: #e71c5b;
+
+    img-background: url("~/.config/bspwm/rices/karla/rofi.webp", width);
 }

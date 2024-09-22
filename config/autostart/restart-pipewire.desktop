@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/shawyha/.config/autostart/restart-pipewire.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Restart PipeWire
+Comment=Restart PipeWire at startup

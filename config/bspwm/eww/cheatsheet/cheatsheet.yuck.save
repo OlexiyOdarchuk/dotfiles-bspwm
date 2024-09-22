@@ -156,20 +156,14 @@
         (label :class "category-move" :xalign 0.5 :text "Move/Resize")
         (label :text ""))
       (box :orientation "h" :space-evenly "true"
-        (label :class "keys" :xalign 0 :text "Expand node with keyboard")
+        (label :class "keys" :xalign 0 :text "Expand node")
         (label :class "keys-alt" :xalign 1 :text "Ctrl + Alt +    "))
       (box :orientation "h" :space-evenly "true"
-        (label :class "keys" :xalign 0 :text "Contract node with keyboard")
-        (label :class "keys-alt" :xalign 1 :text "Ctrl + Shift + Alt    "))
+        (label :class "keys" :xalign 0 :text "Contract node")
+        (label :class "keys-alt" :xalign 1 :text "Ctrl Shift Alt    "))
       (box :orientation "h" :space-evenly "true"
-        (label :class "keys" :xalign 0 :text "Expand/Contract node with mouse")
-        (label :class "keys-alt" :xalign 1 :text "Super + RBM + mouse"))
-      (box :orientation "h" :space-evenly "true"
-        (label :class "keys" :xalign 0 :text "Move floating node with keyboard")
+        (label :class "keys" :xalign 0 :text "Move floating node")
         (label :class "keys-alt" :xalign 1 :text "Alt + Shift +    "))
-      (box :orientation "h" :space-evenly "true"
-        (label :class "keys" :xalign 0 :text "Move floating node with mouse")
-        (label :class "keys-alt" :xalign 1 :text "Super + LBM + mouse"))
     )
 
     (box :orientation "v" :space-evenly "false" :spacing 2
@@ -183,11 +177,8 @@
         (label :class "keys" :xalign 0 :text "Hide/Unhide Polybar")
         (label :class "keys-alt" :xalign 1 :text "Super + Alt + {h,u}"))
       (box :orientation "h" :space-evenly "true"
-        (label :class "keys" :xalign 0 :text "Change language(UA/EN)")
-        (label :class "keys-alt" :xalign 1 :text "Alt + q"))
-      (box :orientation "h" :space-evenly "true"
-      (label :class "keys" :xalign 0 :text "Change language(RU)")
-        (label :class "keys-alt" :xalign 1 :text "Alt + q+ r"))
+        (label :class "keys" :xalign 0 :text "Change transparency")
+        (label :class "keys-alt" :xalign 1 :text "Ctrl + Alt + {+,-,t}"))
       (box :orientation "h" :space-evenly "true"
         (label :class "keys" :xalign 0 :text "Network Manager")
         (label :class "keys-alt" :xalign 1 :text "Super + Alt + n"))
@@ -216,9 +207,6 @@
         (label :class "keys" :xalign 0 :text "File Manager")
         (label :class "keys-alt" :xalign 1 :text "Shift + Alt + n"))
       (box :orientation "h" :space-evenly "true"
-	(label :class "keys" :xalign 0 :text "Spotify")
-        (label :class "keys-alt" :xalign 1 :text "Shift + Alt + s"))
-      (box :orientation "h" :space-evenly "true"
         (label :class "keys" :xalign 0 :text "Editor")
         (label :class "keys-alt" :xalign 1 :text "Shift + Alt + g"))
       (box :orientation "h" :space-evenly "true"
@@ -228,11 +216,8 @@
         (label :class "keys" :xalign 0 :text "Ncmpcpp")
         (label :class "keys-alt" :xalign 1 :text "Shift + Alt + k"))
       (box :orientation "h" :space-evenly "true"
-        (label :class "keys" :xalign 0 :text "Telegram")
-        (label :class "keys-alt" :xalign 1 :text "Shift + Alt + t"))
-      (box :orientation "h" :space-evenly "true"
-      (label :class "keys" :xalign 0 :text "Discord")
-        (label :class "keys-alt" :xalign 1 :text "Shift + Alt + d"))
+        (label :class "keys" :xalign 0 :text "Pavucontrol")
+        (label :class "keys-alt" :xalign 1 :text "Shift + Alt + p"))
       (box :orientation "h" :space-evenly "true"
         (label :class "category-power" :xalign 0.5 :text "Power")
         (label :text ""))

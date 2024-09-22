@@ -43,7 +43,7 @@ case $MY_TERM in
                 alacritty
                 ;;
             "--floating")
-                alacritty --class FloaTerm,FloaTerm -o window.dimensions.lines=22 window.dimensions.columns=90
+                alacritty --class floaTerm,FloaTerm -o window.dimensions.lines=22 window.dimensions.columns=90
                 ;;
             "--update")
                 alacritty --hold --class FloaTerm,FloaTerm -o window.dimensions.lines=22 window.dimensions.columns=90 -e Updates --update-system

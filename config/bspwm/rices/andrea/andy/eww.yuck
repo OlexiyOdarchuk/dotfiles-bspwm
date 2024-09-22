@@ -91,7 +91,7 @@
 			(button :style "background-image: url('images/notes.png');"
 					:class "icons"
 					:valign "center"
-					:onclick "OpenApps --editor &"))
+					:onclick "gnome-text-editor &"))
 			
 			(eventbox :cursor "pointer"		  
 			(button :style "background-image: url('images/telegram.png');"

@@ -53,9 +53,9 @@ case "$1" in
         ;;
     --code)
         vscodium
-	;;
+        ;;
     --cava)
-	Term --cava
+	 --cava
 	;;
     --music)
         Term --music
@@ -79,9 +79,6 @@ case "$1" in
     --soundcontrol)
         pavucontrol
         ;;
-    --emoji)
-	emoji-picker
-	;;
         # Eww Widgets
     --KeyHelp)
 		eww -c "$WIDGET_DIR" open --toggle csheet
