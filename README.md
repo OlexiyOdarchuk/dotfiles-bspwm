@@ -1,4 +1,4 @@
-# A complete BSPWM Window Manager Environment
+m# A complete BSPWM Window Manager Environment
 <div align = center>
    
 ![bspwm-dotfiles](https://github.com/gh0stzk/dotfiles/assets/67278339/0340846a-74d4-4a43-9430-142b0832738d)
@@ -442,7 +442,7 @@ The installer only works for **ARCH** Linux, and based distros.
 ```sh
 git clone https://github.com/OlexiyOdarchuk/dotfiles-bspwm
 
-cd dotfiles-bspwm
+cp dotfiles-bspwm/RiceInstaller ~
 ```
 - **Now give it execute permissions**
 ```sh
