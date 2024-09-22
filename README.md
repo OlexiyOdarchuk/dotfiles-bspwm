@@ -440,11 +440,9 @@ The installer only works for **ARCH** Linux, and based distros.
 <b>Open a terminal in HOME</b>
 - **First download the installer**
 ```sh
-curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/RiceInstaller -o $HOME/RiceInstaller
+git clone https://github.com/OlexiyOdarchuk/dotfiles-bspwm
 
-# Maybe you want a short url??
-
-curl -L https://is.gd/gh0stzk_dotfiles -o $HOME/RiceInstaller
+cd dotfiles-bspwm
 ```
 - **Now give it execute permissions**
 ```sh
